@@ -1,0 +1,87 @@
+.vintage-oliva {
+    @media (max-width: 790px) {
+        border-bottom: 1px solid #a5a9ac;
+    }
+
+    .vintage-oliva__container {
+        display: flex;
+        max-height: 600px;
+
+        .vintage-oliva__left-col {
+            position: relative;
+
+            @media (max-width: 790px) {
+                display: none;
+            }
+
+            .vintage-oliva__bg {
+                @include imgadapt;
+            }
+
+            .vintage-oliva__logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .vintage-oliva__right-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+
+            .vintage-oliva__right-col-top {
+                padding: $padding;
+                position: relative;
+
+                & img {
+                    @include imgadapt;
+                    margin-bottom: 30px;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    bottom: 10%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50px;
+                    height: 1px;
+                    background-color: grey;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    bottom: -7%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-top: 15px solid #fff;
+                    border-bottom: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                }
+            }
+
+            .vintage-oliva__text {
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            & img {
+                margin: 0 auto;
+            }
+
+            .vintage-oliva__title {
+                margin-bottom: 20px;
+            }
+
+            &-bottom img {
+                max-width: 100%;
+            }
+        }
+    }
+}

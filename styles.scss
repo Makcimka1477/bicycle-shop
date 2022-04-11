@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+                    
+.wrapper {
+    margin: 0 auto;
+    width: 1600px;
+    overflow: hidden;
+
+    @media (max-width: 790px) {
+        width: 790px;
+    }
+
+    @media (max-width: 540px) {
+        width: 540px;
+    }
+}
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 20px;
+                        
+    @media (max-width: 790px) {
+        max-width: 650px;
+    }
+    
+    @media (max-width: 400px) {
+        max-width: 450px;
+    }
+}
+
+.container__mini {
+    max-width: 533px;
+    margin: 0 auto;
+    @media (max-width: 790px) {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+img {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #353738;
+}
+
+.text {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 34px;
+    letter-spacing: normal;
+    color: #848789;
+}
+
+.active {
+    display: block;
+}
+$padding: 60px 40px 72px 40px;
+
+
+@import './module/mixins';
+@import './module/normalize';
+@import './module/header';
+@import './module/new-generation';
+@import './module/vintage-olivia';
+@import './module/la-boriosa';
+@import './module/retro-bike';
+@import './module/slider';
+@import './module/shop';
+@import './module/discovery-shop';
+@import './module/stay-on';
+@import './module/footer';
+
+
+// .new-wrapper {
+//     padding: 16px;
+//     margin: 0 auto;
+
+//     @media (min-width: 768px) {
+//             padding: 0 24px;
+//         }
+    
+//     @media (min-width: 1280px) {
+//             padding: 0 44px;
+//             max-width: 1280px;
+//         }
+//     }
+    
+// .content {
+//     background: darkgray;
+
+//     &__title {
+//         font-size: 24px;
+//         margin-bottom: 24px;
+//         text-align: center;
+
+//         @media (min-width: 768px) {
+//             font-size: 28px;
+//             margin-bottom: 32px;
+//         }
+
+//         @media (min-width: 1280px) {
+//             font-size: 32px;
+//         }
+//     }
+
+//         &__dwcription {
+//         font-size: 16px;
+
+//             @media (min-width: 768px) {
+//                 font-size: 20px;
+//             }
+
+//             @media (min-width: 1280px) {
+//                 font-size: 24px;
+//             }
+//         }
+
+//         &__img-wrapper {
+//             height: 248px;
+//         }
+//         &__img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//         }
+// }

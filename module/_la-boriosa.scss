@@ -1,0 +1,83 @@
+.la-boriosa {
+    &__container {
+        display: flex;
+
+        @media (max-width: 790px) {
+            border-bottom: 1px solid #a5a9ac;
+        }
+
+        .la-boriosa__left-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-top {
+                position: relative;
+                padding: $padding;
+                flex-grow: 1;
+
+                & img {
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+
+                .la-boriosa__title {
+                    margin-bottom: 10px;
+                }
+
+                .la-boriosa__text {
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 50px;
+                        height: 1px;
+                        background-color: grey;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        bottom: -7%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top: 15px solid #fff;
+                        border-bottom: 15px solid transparent;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                    }
+                }
+            }
+
+            &-bottom {
+                margin: 0 auto;
+                .la-boriosa__minibg {
+                    @include imgadapt;
+                }
+            }
+        }
+
+        .la-boriosa__right-col {
+            position: relative;
+
+            @media (max-width: 790px) {
+                display: none;
+            }
+
+            .la-boriosa__bg {
+                @include imgadapt;
+            }
+
+            .la-boriosa__logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 100%;
+            }
+        }
+    }
+}
+

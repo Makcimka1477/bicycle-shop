@@ -1,0 +1,22 @@
+.discovery-shop {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #282f35;
+
+    .discovery-shop__button {
+        text-align: center;
+
+        a {
+            button {
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 15px 60px;
+                border: 2px solid #fff;
+                background-color: #282f35;
+                color: #fff;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

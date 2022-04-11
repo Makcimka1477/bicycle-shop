@@ -1,0 +1,81 @@
+.retro-bike {
+    @media (max-width: 790px) {
+        border-bottom: 1px solid #a5a9ac;
+    }
+
+    .retro-bike__container {
+        .retro-bike__row {
+            display: flex;
+
+            .retro-bike__col {
+                flex: 1 1 33.33%;
+
+                &-top {
+                    position: relative;
+                    padding: $padding;
+
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 50px;
+                        height: 1px;
+                        background-color: grey;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        bottom: -7%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top: 15px solid #fff;
+                        border-bottom: 15px solid transparent;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                    }
+                }
+
+                .retro-bike__title {
+                    margin-bottom: 10px;
+                }
+
+                .retro-bike__text {}
+            }
+
+            .col1 img {
+                @include imgadapt;
+            }
+
+            .col2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                & img {
+                    @include imgadapt;
+                }
+            }
+
+            .col3 img {
+                @include imgadapt;
+            }
+
+            .retro-bike__img img {
+                margin: 0 auto 10px auto;
+            }
+
+            .col1,
+            .col3 {
+                @media (max-width: 790px) {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+}

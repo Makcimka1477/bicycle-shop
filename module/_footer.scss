@@ -1,0 +1,98 @@
+.footer {
+    color: #848789;
+    background-color: #f7f7f7;
+    line-height: 22px;
+    padding: 90px 0 100px 0;
+    position: relative;
+
+    @media (max-width: 790px) {
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 18px;
+    }
+    &__container {
+        padding: 0;
+    }
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 790px) {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 540px) {}
+
+        .footer__col {}
+
+        .col1 {
+            @media (max-width: 540px) {
+                & > * {
+                    margin-bottom: 10px;
+                }
+            }
+            
+            @media (max-width:850px) {
+                max-width: 310px;
+                margin-right: 20px;
+            }
+
+            @media (max-width: 790px) {
+                max-width: 150px;
+            }
+
+            .col1__title {
+                font-size: 21px;
+            }
+
+            .col1__index {
+                font-size: 18px;
+            }
+
+            .col1__mail {
+                font-size: 18px;
+            }
+        }
+
+        .col2 {
+            .footer__social {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                @media (max-width: 790px) {
+                    top: 35%;
+                }
+                & > img {
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .col3 {
+            display: flex;
+
+            @media (max-width: 790px) {
+                display: block;
+            }
+
+            .col3__text {
+                margin-right: 10px;
+
+                @media (max-width: 790px) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+            .col3__logo {
+                margin-right: 0;
+            }
+        }
+    }
+}

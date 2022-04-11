@@ -1,0 +1,23 @@
+.new-generation {
+    background-color: #f7f7f7;
+    padding: 115px 0 135px 0;
+    text-align: center;
+    @media (max-width: 400px) {
+        padding: 70px 0 70px 0;
+    }
+    .new-generation__container {}
+
+    .new-generation__img {
+        margin-bottom: 30px;
+
+        & img {
+            margin: 0 auto;
+        }
+    }
+
+    .new-generation__title {
+        margin-bottom: 30px;
+    }
+
+    .new-generation__text {}
+}

@@ -1,0 +1,101 @@
+.slider {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    background-color: #f7f7f7;
+    input {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    .i1:checked ~ .slider__nav .l1,
+    .i2:checked ~ .slider__nav .l2,
+    .i3:checked ~ .slider__nav .l3 {
+        background-color: #a9afb3;
+    }
+    .i1:checked > .slides {
+        left: 0px;
+    }
+    .i2:checked ~ .slides {
+        left: -100%;
+        @media (max-width: 790px) {
+            left: -100%;
+        }
+    }
+    .i3:checked ~ .slides {
+        left: -200%;
+        @media (max-width: 790px) {
+            left: -200%;
+        }
+    }
+    .slider__nav {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+        @media (max-width: 400px) {
+            bottom: 5%; 
+        }
+        label {
+            padding: 10px;
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+            border: 2px solid #a9afb3;
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+        
+    }
+
+
+    .slides {
+        position: absolute;
+        left: 0;
+        width: 300%;
+        display: flex;
+        transition: all 0.5s ease;
+        .slide {
+            margin: 0 auto 100px auto;
+            width: 1110px;
+            text-align: center;
+            @media (max-width: 790px) {
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 790px;
+            }
+            @media (max-width: 400px) {
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 400px;
+            }
+            &>*:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            & img {
+                margin: 0 auto;
+            }
+            &__title {
+                letter-spacing: 2px;
+                & span {
+                    color: #848789;
+                }
+            }
+
+            &__text {
+                font-weight: 500;
+                font-style: italic;
+                font-size: 24px;
+                color: #848789;
+            }
+        }
+    }
+}
